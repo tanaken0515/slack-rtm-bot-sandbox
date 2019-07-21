@@ -1,7 +1,7 @@
 module ParrotBot
   module Commands
     class Parrot < SlackRubyBot::Commands::Base
-      command 'parrot' do |client, data, _match|
+      operator 'parrot' do |client, data, _match|
         client.say(
           channel: data.channel,
           text: "<@#{data.user}> #{data.text}",
